@@ -1,6 +1,7 @@
 # Introduction
 
 Personal Curriculum of Alberto Damo
+Precompiled version can be found in the release section
 
 # Build
 
