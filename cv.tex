@@ -1,4 +1,5 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage{url}
 
 % ModernCV themes
 \moderncvstyle{banking}
@@ -9,10 +10,10 @@
 \usepackage[scale=0.85]{geometry}
 
 % Personal data
-\name{[Alberto]}{[Damo]}
+\name{Alberto}{Damo}
 \title{Kernel \& Systems Software Developer}
-\address{[Oderzo, Italy]}{}
-\email{[alberto.damo@proton.me]}
+\address{Oderzo, Italy}{}
+\email{alberto.damo@proton.me}
 \homepage{github.com/mrmonopoly-cyber}
 \social[linkedin]{alberto-damo-62b81b23a}
 \extrainfo{Master’s Student in Computer Science}
@@ -33,20 +34,21 @@ Seeking to contribute to IBM’s Linux kernel and virtualization initiatives whi
 % TECHNICAL SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
-\cvitem{Programming}{C (expert), Assembly (x86\_64 / TriCore basics), Shell scripting}
+\cvitem{Programming}{C (expert), Rust, C\texttt{++}, Java, Haskell, Golang, F\#, Assembly (x86\_64 GAS basics), Bash }
 \cvitem{Systems}{Linux internals, bootloaders, UEFI, memory management, kernel architecture}
 \cvitem{Embedded}{AURIX TC375 (TriCore), tricore-elf-gcc, linker scripts, atomic operations, GPIO \& CAN control}
-\cvitem{Tools}{Git, GCC, GDB, QEMU, OVMF (Tianocore), libgpiod, SocketCAN, CI/CD}
+\cvitem{Tools}{Git, GCC, GDB, QEMU, OVMF (Tianocore), libgpiod, SocketCAN}
 \cvitem{Concepts}{Concurrency, interrupts, synchronization, atomic operations, virtualization fundamentals}
-\cvitem{Open Source}{GitHub project maintainer; enforces branch protection and CI for integrity}
 
 %----------------------------------------------------------------------------------------
 % EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\cventry{[Expected Graduation Year]}{Master’s Degree in Computer Engineering}{[Your University Name]}{}{}{
-Focus areas: Operating Systems, Embedded Systems, Computer Architecture.}
+\cventry{Expected 2026}{Master’s Degree in Computer Science}{University of Padua}{}{}{
+  Focus areas: Operating Systems, Embedded Systems, Computer Architecture.}
 
+\cventry{2019--2023}{Bachelor’s Degree in Computer Science}{University of Udine}{}{}{
+Graduated with a focus on Software Engineering, Systems Programming, and Distributed Systems.}
 %----------------------------------------------------------------------------------------
 % PROJECTS
 %----------------------------------------------------------------------------------------
@@ -54,39 +56,78 @@ Focus areas: Operating Systems, Embedded Systems, Computer Architecture.}
 
 \cventry{2025--Present}{\textbf{Custom OS}}{UEFI-Compliant Operating System from Scratch}{}{}{
 \begin{itemize}%
-  \item Designed and implemented a \textbf{UEFI bootloader} and \textbf{monolithic kernel} entirely in C and Assembly.
+  \item Designed and implemented a \textbf{UEFI bootloader} and \textbf{monolithic kernel} entirely in Rust and Assembly.
   \item Built a UEFI-compliant \textbf{disk image generation utility} compatible with QEMU (OVMF / Tianocore).
   \item Developed early boot stages including \textbf{memory initialization}, console I/O, and process management foundations.
 \end{itemize}}
 
-\cventry{2023--Present}{\textbf{ControlUnitLogicOperator}}{Linux-Based Multi-Component System Simulator}{}{}{
+\cventry{2024--2025}{\textbf{ControlUnitLogicOperator}}{Linux-Based Multi-Component System Simulator}{}{}{
 \begin{itemize}%
   \item Built a modular simulation environment of 46 emulated components communicating via shared CAN buses and GPIOs.
   \item Implemented a \textbf{runtime trace stack} for error diagnostics using \_\_FILE\_\_ and \_\_LINE\_\_.
   \item Designed a \textbf{Safety Critical System (SCS)} with atomic synchronization across threads.
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/ControlUnitLogicOperator}
 \end{itemize}}
 
-\cventry{2023--Present}{\textbf{DPS (Debug Peripheral System)}}{Command-Line Debugging Interface}{}{}{
+\cventry{2024--2025}{\textbf{DPS (Debug Peripheral System)}}{Command-Line Debugging Interface}{}{}{
 \begin{itemize}%
   \item Created a \textbf{CLI-based debugging tool} supporting live monitoring and introspection of system state.
   \item Provides modular runtime telemetry for GPIO and CAN buses.
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/DPS}
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/dps_cli}
 \end{itemize}}
 
-\cventry{2024}{\textbf{AURIX TC375 Firmware}}{Bare-Metal Safety-Critical Software}{}{}{
+\cventry{2024}{\textbf{Arithmetic Combinators Interpreter}}{Proof-of-Concept for Expression Evaluation via Interaction Combinators}{}{}{
 \begin{itemize}%
-  \item Developed firmware for Infineon AURIX TC375 using custom linker scripts and atomic synchronization.
-  \item Designed deterministic exception-safe handling without standard libraries.
+  \item Designed and implemented an interpreter for arithmetic expressions based on the theory of Interaction Combinators
+  \item Written in Rust, supports parsing of arithmetic expressions and reduction via Interaction combinators graph theory.
+  \item Demonstrates theoretical computation models (graph rewriting, combinators) applied to practical expression evaluation.  
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/arithmetic_combinators}
+\end{itemize}}
+
+\cventry{2024}{\textbf{Raft Project Runtime}}{Distributed Computing Cluster}{}{}{
+\begin{itemize}%
+  \item Designed and implemented a \textbf{Raft-based distributed runtime} in Go for orchestrating a self-hosted VM cluster.
+  \item Built a fully automated image generation pipeline using \textbf{ArchISO} and \textbf{libvirt} for deployment.
+  \item Enabled reproducible multi-node boot environments and network coordination through a lightweight cluster manager.
+  \item \textbf{Paper link:} \url{https://www.linkedin.com/feed/update/urn:li:activity:7298456277242806272/}
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/raft_project_runtime}
+\end{itemize}}
+
+\cventry{2023}{\textbf{Portage-Utils (qmerge fork)}}{Extended Gentoo’s qmerge utility for DevOps automation}{Nucleus S.r.l.}{}{
+\begin{itemize}%
+  \item Forked and maintained a customized version of Gentoo’s \texttt{qmerge} utility to add functionality for internal deployment workflows.
+  \item Integrated new features for dependency resolution and build pipeline optimizations within a large-scale DevOps environment.
+  \item Project available at: \url{https://github.com/mrmonopoly-cyber/portage-utils}
 \end{itemize}}
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
 %----------------------------------------------------------------------------------------
 \section{Experience}
-\cventry{2023--Present}{Independent Systems Developer}{}{Self-directed}{}{
+
+\cventry{2023--2024}{\textbf{Software Department Member}}{RaceUp Formula SAE Team}{}{}{
 \begin{itemize}%
-  \item Designed architectures for both embedded and OS-level systems with a focus on portability and maintainability.
-  \item Built custom debugging infrastructure with traceable runtime analysis.
-  \item Mentored peers on sustainable system design and CI/CD integration.
+  \item Member of the software department of \textbf{RaceUp}, the official Formula SAE team of the University of Padua.
+  \item Designed and implemented the \textbf{ControlUnitLogicOperator} project: a modular Linux-based system simulator for embedded control units.
+  \item Developed a \textbf{Safety Critical System (SCS)} with atomic synchronization across threads and real-time exception handling.
+  \item Created the \textbf{DPS (Debug Peripheral System)} and \textbf{DPS CLI} to provide live debugging and telemetry of GPIO and CAN signals.
+  \item \textbf{Repositories:} \url{https://github.com/mrmonopoly-cyber/ControlUnitLogicOperator}, \url{https://github.com/mrmonopoly-cyber/DPS}, \url{https://github.com/mrmonopoly-cyber/dps_cli}
+\end{itemize}}
+
+\cventry{2023--2023}{\textbf{DevOps Developer}}{Nucleus S.r.l.}{}{}{
+\begin{itemize}%
+  \item Contributed to infrastructure automation and software deployment pipelines.
+  \item Forked and extended \textbf{Qmerge (Gentoo portage-utils)} to enhance dependency handling and CI behavior.
+  \item Worked with system-level Linux tools, package management, and scripting for system provisioning.
+  \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/portage-utils}
+\end{itemize}}
+
+\cventry{2023-2024}{\textbf{Cloud Engineer Intern}}{Nucleus S.r.l. (Udine, Italy)}{}{}{
+\begin{itemize}%
+  \item Worked on distributed storage and orchestration solutions using \textbf{Ceph} and \textbf{Kubernetes}.
+  \item Assisted in configuring and maintaining on-premise and hybrid cloud clusters.
+  \item Focused on performance optimization and deployment automation.
 \end{itemize}}
 
 %----------------------------------------------------------------------------------------
@@ -95,15 +136,19 @@ Focus areas: Operating Systems, Embedded Systems, Computer Architecture.}
 \section{Achievements}
 \cvitem{}{- Currently building a fully bootable UEFI-compliant OS from scratch.}
 \cvitem{}{- Published open-source systems demonstrating atomic synchronization and debugging architecture.}
-\cvitem{}{- Built a custom 32-bit Linux environment for emulation and testing.}
+\cvitem{}{- Built a custom 32-bit Linux environment for emulation and testing as test environment for the \textbf{ControlUnitLogicOperator}.}
 
 %----------------------------------------------------------------------------------------
 % ADDITIONAL INFO
 %----------------------------------------------------------------------------------------
 \section{Additional Information}
-\cvitem{Languages}{Fluent in English}
+\cvitem{Languages}{
+\textbf{English:} C1 (Advanced) \\
+\textbf{Italian:} C2 (Native)\\
+}
 \cvitem{Interests}{Kernel engineering, virtualization, systems security, open-source development}
-\cvitem{Goal}{Contribute to IBM’s Linux kernel and confidential container initiatives}
+\cvitem{Goal}{To expand my expertise in kernel and systems programming by contributing to IBM’s Linux kernel, virtualization, and confidential computing initiatives.}
+
 
 \end{document}
 
