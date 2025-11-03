@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV themes
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Encoding
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+
+% Personal data
+\name{[Alberto]}{[Damo]}
+\title{Kernel \& Systems Software Developer}
+\address{[Oderzo, Italy]}{}
+\email{[alberto.damo@proton.me]}
+\homepage{github.com/mrmonopoly-cyber}
+\social[linkedin]{alberto-damo-62b81b23a}
+\extrainfo{Master’s Student in Computer Science}
+
+\begin{document}
+\makecvtitle
+
+%----------------------------------------------------------------------------------------
+% PROFILE
+%----------------------------------------------------------------------------------------
+\section{Profile}
+Systems and embedded software developer specializing in \textbf{low-level C programming}, \textbf{operating system internals}, and \textbf{bare-metal development}. 
+Currently developing a \textbf{UEFI-compliant OS from scratch}, including a custom bootloader, kernel, and disk image generation utility for QEMU (Tianocore). 
+Passionate about Linux, kernel programming, and open-source collaboration. 
+Seeking to contribute to IBM’s Linux kernel and virtualization initiatives while deepening expertise in systems architecture and performance.
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\cvitem{Programming}{C (expert), Assembly (x86\_64 / TriCore basics), Shell scripting}
+\cvitem{Systems}{Linux internals, bootloaders, UEFI, memory management, kernel architecture}
+\cvitem{Embedded}{AURIX TC375 (TriCore), tricore-elf-gcc, linker scripts, atomic operations, GPIO \& CAN control}
+\cvitem{Tools}{Git, GCC, GDB, QEMU, OVMF (Tianocore), libgpiod, SocketCAN, CI/CD}
+\cvitem{Concepts}{Concurrency, interrupts, synchronization, atomic operations, virtualization fundamentals}
+\cvitem{Open Source}{GitHub project maintainer; enforces branch protection and CI for integrity}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\cventry{[Expected Graduation Year]}{Master’s Degree in Computer Engineering}{[Your University Name]}{}{}{
+Focus areas: Operating Systems, Embedded Systems, Computer Architecture.}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Selected Projects}
+
+\cventry{2025--Present}{\textbf{Custom OS}}{UEFI-Compliant Operating System from Scratch}{}{}{
+\begin{itemize}%
+  \item Designed and implemented a \textbf{UEFI bootloader} and \textbf{monolithic kernel} entirely in C and Assembly.
+  \item Built a UEFI-compliant \textbf{disk image generation utility} compatible with QEMU (OVMF / Tianocore).
+  \item Developed early boot stages including \textbf{memory initialization}, console I/O, and process management foundations.
+\end{itemize}}
+
+\cventry{2023--Present}{\textbf{ControlUnitLogicOperator}}{Linux-Based Multi-Component System Simulator}{}{}{
+\begin{itemize}%
+  \item Built a modular simulation environment of 46 emulated components communicating via shared CAN buses and GPIOs.
+  \item Implemented a \textbf{runtime trace stack} for error diagnostics using \_\_FILE\_\_ and \_\_LINE\_\_.
+  \item Designed a \textbf{Safety Critical System (SCS)} with atomic synchronization across threads.
+\end{itemize}}
+
+\cventry{2023--Present}{\textbf{DPS (Debug Peripheral System)}}{Command-Line Debugging Interface}{}{}{
+\begin{itemize}%
+  \item Created a \textbf{CLI-based debugging tool} supporting live monitoring and introspection of system state.
+  \item Provides modular runtime telemetry for GPIO and CAN buses.
+\end{itemize}}
+
+\cventry{2024}{\textbf{AURIX TC375 Firmware}}{Bare-Metal Safety-Critical Software}{}{}{
+\begin{itemize}%
+  \item Developed firmware for Infineon AURIX TC375 using custom linker scripts and atomic synchronization.
+  \item Designed deterministic exception-safe handling without standard libraries.
+\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+\cventry{2023--Present}{Independent Systems Developer}{}{Self-directed}{}{
+\begin{itemize}%
+  \item Designed architectures for both embedded and OS-level systems with a focus on portability and maintainability.
+  \item Built custom debugging infrastructure with traceable runtime analysis.
+  \item Mentored peers on sustainable system design and CI/CD integration.
+\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Achievements}
+\cvitem{}{- Currently building a fully bootable UEFI-compliant OS from scratch.}
+\cvitem{}{- Published open-source systems demonstrating atomic synchronization and debugging architecture.}
+\cvitem{}{- Built a custom 32-bit Linux environment for emulation and testing.}
+
+%----------------------------------------------------------------------------------------
+% ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
+\section{Additional Information}
+\cvitem{Languages}{Fluent in English}
+\cvitem{Interests}{Kernel engineering, virtualization, systems security, open-source development}
+\cvitem{Goal}{Contribute to IBM’s Linux kernel and confidential container initiatives}
+
+\end{document}
+
