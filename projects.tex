@@ -1,59 +1,104 @@
-%----------------------------------------------------------------------------------------
-% SELECTED PROJECTS
-%----------------------------------------------------------------------------------------
 \section{Selected Projects}
 
-\cventry{March 2026--Present}{\textbf{CRuntime}}{A simple freestanding task scheduler}{}{}{
+\cventry{2024--2025}{\textbf{ControlUnitLogicOperator (C / AURIX TC375)}}{Multi-Core Bare-Metal Firmware System}{RaceUp Formula SAE Team}{}{
   \begin{itemize}
-    \item Designed and implemented a freestanding, cooperative, portable, parallel task scheduler.
-    \item Designed and implemented a HAL for easier deployment on different context (OS, bare-metal, ...)
-    \item Designed and implemented lock-free algorithms and data structure for maximum performance
-    \item Designed and Implemented high performance task suspension using CPU's registers
-  \end{itemize}
-}
-
-\cventry{December 2025--2026 January}{\textbf{NearestAP}}{Distributed Leader Convergence System}{}{}{
-  \begin{itemize}
-    \item Designed and implemented a fault-tolerant leader convergence protocol for unreliable
-      broadcast-only networks
-    \item Developed HAL to deploy on Crazyflie drones and Linux-based emulation environments
-      for deterministic testing through a multi-target deployment.
-    \item Modeled failure scenarios including packet loss and unstable network topology
-    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/nearest_ap}
-  \end{itemize}
-}
-
-\cventry{2024--2025}{\textbf{ControlUnitLogicOperator (C / AURIX TC375)}}{Real-Time Multi-Core Systems Software}{RaceUp Formula SAE Team}{}{
-  \begin{itemize}%
-    \item Designed and implemented concurrent bare-metal systems software for a multi-core
-      TriCore MCU
-    \item Developed lock-free / atomic synchronization mechanisms and safety-critical logic
-    \item Built deterministic emulator to validate runtime behavior without HIL hardware
-    \item Implemented runtime trace stack and diagnostics infrastructure for failure analysis
-    similar to ERRNO
+    \item Designed bare-metal firmware for Infineon AURIX TC375 (multi-core TriCore) without RTOS support
+    \item Implemented lock-free and atomic synchronization primitives for inter-core communication
+    \item Developed safety-critical fault handling using GPIO-based global emergency signaling
+    \item Built deterministic Linux-based emulator (QEMU + SocketCAN) to validate runtime behavior without HIL hardware
+    \item Implemented runtime trace stack for error diagnostics using \_\_FILE\_\_ and \_\_LINE\_\_
     \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/ControlUnitLogicOperator}
   \end{itemize}
-  }
+}
 
-\cventry{2024--2025}{\textbf{Debug Peripheral System (DPS)}}{Runtime Debugging Interface}{RaceUp Formula SAE Team}{}{
-  \begin{itemize}%
-    \item Designed lightweight Master/Slave live calibration system over CAN for embedded systems.
-    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/DPS}
-    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/dps_cli}
+\cventry{March 2026--Present}{\textbf{CRuntime}}{Freestanding Task Scheduler and Execution Runtime}{}{}{
+  \begin{itemize}
+    \item Designed a freestanding cooperative task scheduler for constrained environments (no OS / libc)
+    \item Implemented hardware abstraction layer (HAL) for portability across bare-metal and Linux targets
+    \item Developed lock-free data structures for task management and scheduling
+    \item Implemented low-overhead task suspension leveraging CPU register state
+    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/CRuntime}
   \end{itemize}
-  }
+}
 
-\cventry{2024}{\textbf{Raft Project Runtime (Go / libvirt)}}{Distributed Computing Cluster}{}{}{
-  \begin{itemize}%
-    \item Developed a VM based cluster based on the RAFT paper with resizing.
-    \item Experimented an automatic hot update system for the node of the cluster.
-    \item \textbf{Paper link:} \url{https://www.linkedin.com/feed/update/urn:li:activity:7298456277242806272/}
-    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/raft_project_runtime}
-  \end{itemize}}
+\cventry{2024--2025}{\textbf{Debug Peripheral System (DPS)}}{Embedded Diagnostics and Calibration Framework}{RaceUp Formula SAE Team}{}{
+  \begin{itemize}
+    \item Designed CAN-based master/slave system for real-time diagnostics and live parameter calibration
+    \item Developed command-line interface (CLI) for runtime interaction with embedded nodes
+    \item Enabled remote inspection and tuning of firmware state without recompilation or redeployment
+    \item \textbf{Repositories:} \url{https://github.com/mrmonopoly-cyber/DPS}, \url{https://github.com/mrmonopoly-cyber/dps_cli}
+  \end{itemize}
+}
 
-\cventry{2023}{\textbf{Portage-Utils (C / Gentoo)}}{Package Management Utility Extension}{Nucleus S.r.l.}{}{
+\cvitem{other projects}{
   \begin{itemize}%
-    \item Forked and extended Gentoo’s qmerge utility
-    \item Reduced server update time from ~12 hours to ~2 hours
-    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/portage-utils}
-  \end{itemize}}
+    \item \textbf{Arithmetic Combinators Interpreter}:
+      \url{https://github.com/mrmonopoly-cyber/arithmetic_combinators}
+      An interpreter for arithmetic expressions based on Interaction Combinators
+      (\url{https://www.sciencedirect.com/science/article/pii/S0890540197926432?ref=pdf_download&fr=RR-2&rr=9cf4e3021c454c4e})
+    \item \textbf{cvector}: \url{https://github.com/mrmonopoly-cyber/c_vector}
+      polymorphic C implementations of the C\texttt{++} vectors
+    \item \textbf{NearestAP}: \url{https://github.com/mrmonopoly-cyber/NearestAP}
+      fault-tolerant leader convergence protocol for unreliable broadcast-only networks in C++17
+  \end{itemize}
+}
+
+%%----------------------------------------------------------------------------------------
+%% SELECTED PROJECTS
+%%----------------------------------------------------------------------------------------
+%\section{Selected Projects}
+%
+%\cventry{March 2026--Present}{\textbf{CRuntime}}{A simple freestanding task scheduler}{}{}{
+%  \begin{itemize}
+%    \item Designed and implemented a freestanding, cooperative, portable, parallel task scheduler.
+%    \item Designed and implemented a HAL for easier deployment on different context (OS, bare-metal, ...)
+%    \item Designed and implemented lock-free algorithms and data structure for maximum performance
+%    \item Designed and Implemented high performance task suspension using CPU's registers
+%  \end{itemize}
+%}
+%
+%\cventry{December 2025--2026 January}{\textbf{NearestAP}}{Distributed Leader Convergence System}{}{}{
+%  \begin{itemize}
+%    \item Designed and implemented a fault-tolerant leader convergence protocol for unreliable
+%      broadcast-only networks
+%    \item Developed HAL to deploy on Crazyflie drones and Linux-based emulation environments
+%      for deterministic testing through a multi-target deployment.
+%    \item Modeled failure scenarios including packet loss and unstable network topology
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/nearest_ap}
+%  \end{itemize}
+%}
+%
+%\cventry{2024--2025}{\textbf{ControlUnitLogicOperator (C / AURIX TC375)}}{Real-Time Multi-Core Systems Software}{RaceUp Formula SAE Team}{}{
+%  \begin{itemize}%
+%    \item Designed and implemented concurrent bare-metal systems software for a multi-core
+%      TriCore MCU
+%    \item Developed lock-free / atomic synchronization mechanisms and safety-critical logic
+%    \item Built deterministic emulator to validate runtime behavior without HIL hardware
+%    \item Implemented runtime trace stack and diagnostics infrastructure for failure analysis
+%    similar to ERRNO
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/ControlUnitLogicOperator}
+%  \end{itemize}
+%  }
+%
+%\cventry{2024--2025}{\textbf{Debug Peripheral System (DPS)}}{Runtime Debugging Interface}{RaceUp Formula SAE Team}{}{
+%  \begin{itemize}%
+%    \item Designed lightweight Master/Slave live calibration system over CAN for embedded systems.
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/DPS}
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/dps_cli}
+%  \end{itemize}
+%  }
+%
+%\cventry{2024}{\textbf{Raft Project Runtime (Go / libvirt)}}{Distributed Computing Cluster}{}{}{
+%  \begin{itemize}%
+%    \item Developed a VM based cluster based on the RAFT paper with resizing.
+%    \item Experimented an automatic hot update system for the node of the cluster.
+%    \item \textbf{Paper link:} \url{https://www.linkedin.com/feed/update/urn:li:activity:7298456277242806272/}
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/raft_project_runtime}
+%  \end{itemize}}
+%
+%\cventry{2023}{\textbf{Portage-Utils (C / Gentoo)}}{Package Management Utility Extension}{Nucleus S.r.l.}{}{
+%  \begin{itemize}%
+%    \item Forked and extended Gentoo’s qmerge utility
+%    \item Reduced server update time from ~12 hours to ~2 hours
+%    \item \textbf{Repository:} \url{https://github.com/mrmonopoly-cyber/portage-utils}
+%  \end{itemize}}
